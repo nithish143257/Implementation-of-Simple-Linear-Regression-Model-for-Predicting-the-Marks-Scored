@@ -13,7 +13,7 @@ To write a program to predict the marks scored by a student using the simple lin
 3. Find the graph for Training set & Test Set
 4. Find the values of MSE,MSA,RMSE
 
-### Program:
+### program:
 
 
 Program to implement the simple linear regression model for predicting the marks scored.
@@ -61,6 +61,7 @@ print('MAE = ',mae)
 rmse=np.sqrt(mse)
 print("RMSE= ",rmse)
 
+```
 
 ## Output:
 
@@ -99,6 +100,10 @@ print("RMSE= ",rmse)
 ### Values of MSE,MAE,RMSE :
 
 ![MODEL](mse.png)
+
+
+
+
 
 ## Result:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
