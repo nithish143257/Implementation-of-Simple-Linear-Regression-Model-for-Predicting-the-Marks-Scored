@@ -26,8 +26,8 @@ RegisterNumber: 212221040115
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.metrics import mean_absolute_error,mean_squared_error 
-df=pd.read_csv('student_scores.csv')
+from sklearn.metrics import mean_absolute_error,mean_squared_error
+df=pd.read_csv('/content/student_scores (1).csv')
 df.head()
 df.tail()
 X=df.iloc[:,:-1].values
@@ -42,62 +42,63 @@ regressor.fit(X_train,Y_train)
 Y_pred=regressor.predict(X_test)
 Y_pred
 Y_test
-plt.scatter(X_train,Y_train,color="orange")
+plt.scatter(X_train,Y_train,color="black")
 plt.plot(X_train,regressor.predict(X_train),color="red")
-plt.title("Hours vs Scores(Training Set)")
+plt.title("Hours vs Scores(Training set)")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
 plt.show()
-plt.scatter(X_test,Y_test,color="blue")
-plt.plot(X_test,regressor.predict(X_test),color="green")
-plt.title("Hours vs Scores(Test Set)")
+plt.scatter(X_test,Y_test,color="purple")
+plt.plot(X_train,regressor.predict(X_train),color="green")
+plt.title("Hours vs Scores (Testing Set)")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
 plt.show()
 mse=mean_squared_error(Y_test,Y_pred)
-print('MSE = ',mse)
+print('MSE= ',mse)
 mae=mean_absolute_error(Y_test,Y_pred)
-print('MSE = ',mae)
+print('MAE = ',mae)
 rmse=np.sqrt(mse)
-print("RMSE = ",rmse)
+print("RMSE= ",rmse)
+
 
 ## Output:
 
 ### df.head():
 
-![image](https://user-images.githubusercontent.com/113762839/229332799-a59de621-50eb-463f-80ef-6ed8057019a9.png)
+![MODEL](head.png)
 
 ### df.tail():
 
-![image](https://user-images.githubusercontent.com/113762839/229332855-be9ef753-c2e1-4200-8bb8-f6195d3b2d0d.png)
+![MODEL](tail.png)
 
 ### Array of  value X :
 
-![image](https://user-images.githubusercontent.com/113762839/229332890-605347d1-6085-4d59-8461-f290cc40357c.png)
+![MODEL](array.png)
 
 ### Array of value Y :
 
-![image](https://user-images.githubusercontent.com/113762839/229332911-a94d5a0a-579f-42e6-94f2-a6ab601f9272.png)
+![MODEL](side.png)
 
 ### Values of Y Prediction :
 
-![image](https://user-images.githubusercontent.com/113762839/229332924-3cad0dfc-3dff-4a6a-8920-7b4bdf0c38e0.png)
+![MODEL](point.png)
 
 ### Array values of Y test :
 
-![image](https://user-images.githubusercontent.com/113762839/229332937-998cded1-bd90-44af-8add-e7f7e5350cac.png)
+![MODEL](small.png)
 
 ### Training Set Graph :
 
-![image](https://user-images.githubusercontent.com/113762839/229332964-8caf1dbb-f83f-406c-81fc-8d6f2cd6765a.png)
+![MODEL](training.png)
 
 ### Test  Set Graph :
 
-![image](https://user-images.githubusercontent.com/113762839/229332990-6e06bd6e-717c-46d2-bc71-a35c1176a5e8.png)
+![MODEL](testing.png)
 
 ### Values of MSE,MAE,RMSE :
 
-![image](https://user-images.githubusercontent.com/113762839/229333003-cb4c7f68-b906-4912-9cde-0314da1c3a9e.png)
+![MODEL](mse.png)
 
 ## Result:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
